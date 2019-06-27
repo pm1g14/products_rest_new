@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'mvn clean install'
-                bat "docker image build .dockerfile -t products_rest:${env.BUILD_ID}"
+                bat "docker image build Dockerfile.dockerfile -t products_rest:${env.BUILD_ID}"
             }
         }
     }
